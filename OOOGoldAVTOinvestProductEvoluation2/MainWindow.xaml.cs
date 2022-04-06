@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Support;
 
 namespace OOOGoldAVTOinvestProductEvoluation2
 {
@@ -32,8 +33,12 @@ namespace OOOGoldAVTOinvestProductEvoluation2
 
         private void ShowBtn_Click(object sender, RoutedEventArgs e)
         {
-            var request = new GetRequest("https://avito.ru");
-            request.Run();
+            var postRequest = new PostRequest("https://www.avito.ru/");
+
+            postRequest.Data = $"";
+
+
+            postRequest.Run();
         }
     }
 }

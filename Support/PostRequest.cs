@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOOGoldAVTOinvestProductEvoluation2
+namespace Support
 {
     public class PostRequest
     {
@@ -20,6 +20,8 @@ namespace OOOGoldAVTOinvestProductEvoluation2
         public string Host { get; set; }
         public string ContentType { get; set; }
         public string Data { get; set; }
+        public string Referer { get; set; }
+        public string Useragent { get; set; }
         public WebProxy Proxy { get; set; }
 
 
@@ -57,6 +59,8 @@ namespace OOOGoldAVTOinvestProductEvoluation2
             _request.Accept = Accept;
             _request.Host = Host;
             _request.ContentType = ContentType;
+            _request.UserAgent = Useragent;
+            _request.Referer = Referer;
 
             byte[] sentData = Encoding.UTF8.GetBytes(Data);
             _request.ContentLength = sentData.Length;

@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOOGoldAVTOinvestProductEvoluation2
+namespace Support
 {
     public class GetRequest
     {
@@ -18,6 +18,8 @@ namespace OOOGoldAVTOinvestProductEvoluation2
         public string Response { get; set; }
         public string Accept { get; set; }
         public string Host { get; set; }
+        public string Referer { get; set; }
+        public string Useragent { get; set; }
         public WebProxy Proxy { get; set; }
 
 
@@ -54,6 +56,8 @@ namespace OOOGoldAVTOinvestProductEvoluation2
             _request.Proxy = Proxy;
             _request.Accept = Accept;
             _request.Host = Host;
+            _request.Referer = Referer;
+            _request.UserAgent = Useragent;
 
             foreach (var pair in Headers)
             {
