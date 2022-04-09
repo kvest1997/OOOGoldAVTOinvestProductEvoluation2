@@ -2,8 +2,8 @@
 
 namespace OOOGoldAVTOinvestProductEvoluation2.Core
 {
-    interface IParse<T> where T: class
+    interface IParser<T> where T: class
     {
-        T Parse(IHtmlDocument documetn);
+        T Parser(IHtmlDocument documetn);
     }
 }
