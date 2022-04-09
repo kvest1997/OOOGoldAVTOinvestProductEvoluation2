@@ -31,14 +31,9 @@ namespace OOOGoldAVTOinvestProductEvoluation2
             Application.Current.Shutdown();
         }
 
-        private void ShowBtn_Click(object sender, RoutedEventArgs e)
+        private void RunBtn_Click(object sender, RoutedEventArgs e)
         {
-            var postRequest = new PostRequest("https://www.avito.ru/");
 
-            postRequest.Data = $"";
-
-
-            postRequest.Run();
         }
     }
 }
